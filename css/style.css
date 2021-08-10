@@ -85,6 +85,7 @@ header {
   background: #547c61;
   padding: 15px 0;
   z-index: 999;
+  position: relative;
 }
 header a {
   font-size: 18px;
@@ -154,6 +155,7 @@ span.bar_line:nth-child(2) {
 .contents_bar .center {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .contents_bar .search_bar {
   display: flex;
@@ -187,4 +189,69 @@ span.bar_line:nth-child(2) {
 }
 .contents_bar .search_bar button img {
   width: 15px;
+}
+.contents_bar .drop_bar {
+  width: 100%;
+  margin-top: 10px;
+}
+.contents_bar .drop_bar .dropdown {
+  width: 100%;
+  background: #547c61;
+  position: relative;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+.contents_bar .drop_bar .dropdown.on {
+  border-radius: 20px 20px 0 0;
+}
+.contents_bar .drop_bar .dropdown .select {
+  cursor: pointer;
+  display: block;
+  padding: 15px 20px 15px 0;
+}
+.contents_bar .drop_bar .dropdown .select span {
+  display: inline-block;
+  transform: translateX(10px);
+  font-size: 12px;
+}
+.contents_bar .drop_bar .dropdown .select i {
+  font-size: 13px;
+  cursor: pointer;
+  float: right;
+}
+.contents_bar .drop_bar .dropdown_menu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border: 1px solid #547c61;
+  background: #547c61;
+  display: none;
+}
+.contents_bar .drop_bar .dropdown_menu li {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid #547c61;
+  border-top: 1px solid #ccc;
+}
+.contents_bar .drop_bar .dropdown_menu li a {
+  width: 100%;
+  color: #fff;
+  font-size: 12px;
+}
+
+/*search Position pages style code */
+.contents_bar.search_position {
+  padding: 30px 0;
+}
+
+.map_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }

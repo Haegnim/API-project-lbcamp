@@ -21,18 +21,15 @@
 
 <body>
   <div class="wrap">
-    <!-- Main Background Image -->
-    <img src="/lbcamp/img/gocamp_bg.png" alt="" class="bg">
     <!-- header -->
     <?php include $_SERVER["DOCUMENT_ROOT"].'/lbcamp/include/header.php';?>
 
+    <!-- Map Box -->
+    <div class="map_img" id="map"></div>
+
     <!-- search Bar -->
-    <div class="contents_bar">
+    <div class="contents_bar search_position">
       <div class="center">
-        <div class="search_bar">
-          <input type="text" placeholder="검색할 키워드를 입력해 주세요.">
-          <button><img src="/lbcamp/img/gocamp_icon.png" alt=""></button>
-        </div>
         <div class="drop_bar">
           <div class="dropdown">
             <div class="select">
@@ -52,7 +49,10 @@
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <script src="/lbcamp/js/current_position.js"></script> -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkodlbpvMkU8GwdEbr3RI9CWKmVpca3kc&region=kr">
+  </script>
+  <script src="/lbcamp/js/current_position.js"></script>
   <script src="/lbcamp/js/main.js"></script>
 </body>
 
