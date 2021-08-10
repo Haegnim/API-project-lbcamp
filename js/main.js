@@ -30,3 +30,23 @@ $(function () {
     }
   });
 });
+
+// search position buttom box hide and show
+const h_bt_sl = $(".bt_box span").outerHeight();
+const h_bt_box = $(".bt_box").outerHeight();
+console.log(h_bt_sl);
+console.log(h_bt_box);
+$(".bt_box").css("bottom", -(h_bt_box - h_bt_sl));
+
+$(".bt_box").click(function () {
+  $(this).toggleClass("on");
+  if ($(this).hasClass("on")) {
+    $(".bt_box i").attr("class", "fa fa-chevron-down");
+    $(".bt_box").stop().animate({ bottom: 0 }, 300);
+  } else {
+    $(".bt_box i").attr("class", "fa fa-chevron-up");
+    $(".bt_box")
+      .stop()
+      .animate({ bottom: -(h_bt_box - h_bt_sl) }, 300);
+  }
+});

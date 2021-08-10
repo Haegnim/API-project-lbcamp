@@ -25,7 +25,9 @@
     <?php include $_SERVER["DOCUMENT_ROOT"].'/lbcamp/include/header.php';?>
 
     <!-- Map Box -->
-    <div class="map_img" id="map"></div>
+    <div class="map_img" id="map">
+      <img src="img/gocamp_map.jpg" alt="">
+    </div>
 
     <!-- search Bar -->
     <div class="contents_bar search_position">
@@ -33,7 +35,7 @@
         <div class="drop_bar">
           <div class="dropdown">
             <div class="select">
-              <span>내 주변 캠핑장 검색</span>
+              <span id="query_val">내 주변 캠핑장 검색</span>
               <i class="fa fa-chevron-down"></i>
             </div>
             <ul class="dropdown_menu">
@@ -47,12 +49,19 @@
         </div>
       </div>
     </div>
+    <!-- end of contents_bar -->
+    <div class="bt_box">
+      <span>
+        <i class="fa fa-chevron-up"></i>
+      </span>
+      <div class="bt_sl carousel_section"></div>
+    </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkodlbpvMkU8GwdEbr3RI9CWKmVpca3kc&region=kr">
   </script>
-  <script src="/lbcamp/js/current_position.js"></script>
+  <!-- <script src="/lbcamp/js/current_position.js"></script> -->
   <script src="/lbcamp/js/main.js"></script>
 </body>
 
