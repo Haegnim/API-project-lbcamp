@@ -34,8 +34,8 @@ $(function () {
 // search position buttom box hide and show
 const h_bt_sl = $(".bt_box span").outerHeight();
 const h_bt_box = $(".bt_box").outerHeight();
-console.log(h_bt_sl);
-console.log(h_bt_box);
+// console.log(h_bt_sl);
+// console.log(h_bt_box);
 $(".bt_box").css("bottom", -(h_bt_box - h_bt_sl));
 
 $(".bt_box").click(function () {

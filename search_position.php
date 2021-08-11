@@ -13,6 +13,8 @@
   <link rel="apple-touch-icon" href="/lbcamp/img/favicon.ico" />
   <!-- Font Awesome Link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- owl.carousel style link -->
+  <link rel="stylesheet" href="/lbcamp/css/owl.carousel.css">
   <!-- animation style link -->
   <link rel="stylesheet" href="/lbcamp/css/animation.css">
   <!-- main style link -->
@@ -26,7 +28,7 @@
 
     <!-- Map Box -->
     <div class="map_img" id="map">
-      <img src="img/gocamp_map.jpg" alt="">
+      <!-- <img src="img/gocamp_map.jpg" alt=""> -->
     </div>
 
     <!-- search Bar -->
@@ -54,15 +56,42 @@
       <span>
         <i class="fa fa-chevron-up"></i>
       </span>
-      <div class="bt_sl carousel_section"></div>
+      <div class="bt_sl carousel_section">
+        <div class="carousel_container">
+          <div class="owl-carousel owl-theme" id="contents_box">
+            <!-- start carousel_item -- looping item -->
+            <!-- <div class="carousel_item"> -->
+
+            <!-- <div class="item_card">
+
+                <div class="sl_img">
+                  <img src="img/ex.jpg" alt="">
+                </div>
+                <div class="sl_txt">
+                  <h2>청계산 캠핑장</h2>
+                  <p>청계산 캠핑장은 청계산에서 겁나 멀게 있으며 어쩌구 저쩌구</p>
+                </div>
+                <div class="sl_icons">
+                  <img src="img/ico_mart.png" alt="">
+                  <em>운동시설, 샤워장</em>
+                </div>
+
+              </div>
+            </div> -->
+            <!-- end of carousel_item -- looping item -->
+          </div>
+          <!-- end of owl-carousel --wrap all items -->
+        </div>
+        <!-- end of carousel_containter -->
+      </div>
     </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkodlbpvMkU8GwdEbr3RI9CWKmVpca3kc&region=kr">
-  </script>
-  <!-- <script src="/lbcamp/js/current_position.js"></script> -->
-  <script src="/lbcamp/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkodlbpvMkU8GwdEbr3RI9CWKmVpca3kc&region=kr">
+    </script>
+    <script src="/lbcamp/js/current_position.js"></script>
+    <script src="/lbcamp/js/owl.carousel.js"></script>
+    <script src="/lbcamp/js/main.js"></script>
 </body>
 
 </html>
