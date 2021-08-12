@@ -79,6 +79,7 @@ navigator.geolocation.getCurrentPosition(position => {
   });
 });
 
+//carousel slide
 $(document).ajaxComplete(function () {
   //ajax 데이터가 DOM으로 모두 로드된 이후 실행되는 함수
   let slider = $(".owl-carousel");
@@ -97,4 +98,3 @@ $(document).ajaxComplete(function () {
     });
   });
 });
-//carousel slide

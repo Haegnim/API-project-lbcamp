@@ -51,9 +51,24 @@
       </div>
     </div>
   </div>
+
+  <div id="landing" class="start">
+    <div class="landing_logo">
+      <img src="/lbcamp/img/gocamp_logo.png" alt="">
+    </div>
+    <h2>Go Camp Be Free</h2>
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- <script src="/lbcamp/js/current_position.js"></script> -->
   <script src="/lbcamp/js/main.js"></script>
+  <script>
+  const key_btn = document.querySelector('.search_bar button');
+  key_btn.addEventListener('click', function() {
+    const key_val = document.querySelector('.search_bar input').value;
+    location.href = `/lbcamp/key_position.php?key_val=${key_val}`;
+  })
+  </script>
 </body>
 
 </html>

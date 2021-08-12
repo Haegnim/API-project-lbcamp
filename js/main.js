@@ -1,9 +1,11 @@
 function lineclick() {
   const btn = document.querySelector(".btn");
+  const menu = document.querySelector(".menu");
 
   btn.addEventListener("click", function () {
     btn.classList.toggle("active");
     btn.classList.toggle("not-active");
+    menu.classList.toggle("active");
   });
 }
 lineclick();

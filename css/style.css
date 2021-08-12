@@ -10,6 +10,9 @@ html {
   height: 99.9%;
   overflow: hidden;
 }
+html#detail_html {
+  overflow: auto;
+}
 
 a {
   text-decoration: none;
@@ -65,6 +68,7 @@ body#detail_page {
 }
 body#detail_page .wrap {
   overflow-y: auto;
+  height: auto;
 }
 
 .clearfix:after {
@@ -91,7 +95,7 @@ body#detail_page .wrap {
 header {
   background: #547c61;
   padding: 15px 0;
-  z-index: 999;
+  z-index: 1000;
   position: relative;
 }
 header a {
@@ -102,6 +106,30 @@ header .center {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+header.sticky {
+  position: fixed;
+  width: 100%;
+}
+header .menu {
+  position: absolute;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #547c61;
+  right: 5%;
+  display: none;
+}
+header .menu.active {
+  display: block;
+}
+header .menu a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #ccc;
 }
 
 .btn {
@@ -156,6 +184,47 @@ span.bar_line:nth-child(2) {
   width: 100%;
 }
 
+#landing {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #547c61;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#landing.start {
+  -webkit-animation: start 0.5s 1;
+          animation: start 0.5s 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+#landing .landing_logo {
+  background: #fff;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-animation: scale-up 1s 1;
+          animation: scale-up 1s 1;
+}
+#landing .landing_logo img {
+  width: 60%;
+}
+#landing h2 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
 .contents_bar {
   padding: 70px 0;
 }
@@ -172,6 +241,8 @@ span.bar_line:nth-child(2) {
   border-radius: 20px;
   background: #fff;
   align-items: center;
+  position: relative;
+  z-index: 999;
 }
 .contents_bar .search_bar input {
   height: 30px;
@@ -356,4 +427,110 @@ span.bar_line:nth-child(2) {
   font-style: normal;
   font-size: 11px;
   color: #777;
+}
+
+/*detail page style code */
+.details {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.details .detail_bg {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.details .detail_bg img {
+  width: 100%;
+}
+.details .detail_bg .radi_bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 15px;
+  background: #f4f4f4;
+  border-radius: 15px 15px 0 0;
+}
+.details .detail_contents {
+  width: 100%;
+  height: auto;
+  background: #f4f4f4;
+}
+.details .detail_wrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.details .detail_tit {
+  width: 90%;
+  padding: 8px 0;
+  background: #547c61;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 15px;
+}
+.details .line {
+  width: 90%;
+  height: 1px;
+  background: #547c61;
+  margin: 8px 0;
+}
+.details .detail_info {
+  width: 90%;
+}
+.details .detail_info p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.details .detail_info p:last-child {
+  margin-bottom: 0;
+}
+.details .detail_info span {
+  display: flex;
+  justify-content: flex-start;
+}
+.details .detail_info .info_ico {
+  width: 20%;
+  background: #547c61;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 10px 0;
+}
+.details .detail_info .info_txt {
+  width: calc(80% - 5px);
+  border: 1px solid #547c61;
+  border-radius: 0 10px 10px 0;
+  font-size: 12px;
+  color: #555;
+  padding: 5px;
+}
+.details .info_desc {
+  width: 90%;
+  height: auto;
+  border: 1px solid #547c61;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #555;
+}
+.details #map {
+  width: 90%;
+  height: 200px;
+  margin-top: 10px;
+  border: 1px solid #547c61;
+  padding: 5px;
 }
