@@ -51,8 +51,17 @@
       </div>
     </div>
   </div>
+  <?php
 
-  <div id="landing" class="start">
+$cookie_name = "start";
+$cookie_value = "started";
+setcookie($cookie_name, $cookie_value, time() + 600, "/");
+
+?>
+  <div id="landing" class="
+  <?php if(!isset($_COOKIE[$cookie_name]))
+  {echo "start";}
+  else {echo "started";} ?>">
     <div class="landing_logo">
       <img src="/lbcamp/img/gocamp_logo.png" alt="">
     </div>
@@ -68,6 +77,17 @@
     const key_val = document.querySelector('.search_bar input').value;
     location.href = `/lbcamp/key_position.php?key_val=${key_val}`;
   })
+
+
+  // 쿠키 만들기
+  // function setCookie(value, min) {
+  //   const exdate = new Date();
+  //   exdate.setMinutes(exdate.getMinutes() + 3);
+  //   const cookie_value = escape(value) + ((min == null) ? '' : '; expires=' + exdate.toUTCString());
+  //   document.cookie = cookie_value;
+  // }
+
+  // setCookie('start', 1);
   </script>
 </body>
 

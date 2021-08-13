@@ -15,33 +15,35 @@ $.ajax({
     // let detailItem = "";
     let currentItems = "";
 
-    function itemDOM() {}
-
-    if (Array.isArray(item)) {
-      item.forEach(function (data) {
-        currentItems = `
+    function itemDOM(e) {
+      currentItems = `
     
   <div class="carousel_item">
         <div class="item_card">
-          <a href="/lbcamp/detail_position.php?lat=${data.mapY}&lon=${data.mapX}">
+          <a href="/lbcamp/detail_position.php?lat=${e.mapY}&lon=${e.mapX}">
           <div class="sl_img">
-            <img src="${data.firstImageUrl}" alt="" onerror="this.src='/lbcamp/img/no_image.png'">
+            <img src="${e.firstImageUrl}" alt="" onerror="this.src='/lbcamp/img/no_image.png'">
           </div>
           </a>
           <div class="sl_txt">
-            <h2>${data.facltNm}</h2>
-            <p>${data.addr1}</p>
+            <h2>${e.facltNm}</h2>
+            <p>${e.addr1}</p>
           </div>
           <div class="sl_icons">
             <img src="img/ico_mart.png" alt="">
-            <em>${data.sbrsCl}</em>
+            <em>${e.sbrsCl}</em>
           </div>
 
         </div>
       </div>
       </div>
   `;
-        contentBox.innerHTML += currentItems;
+      contentBox.innerHTML += currentItems;
+    }
+
+    if (Array.isArray(item)) {
+      item.forEach(function (data) {
+        itemDOM(data);
         // console.log(data);
 
         var map;
@@ -72,29 +74,7 @@ $.ajax({
         initMap();
       });
     } else {
-      currentItems = `
-    
-  <div class="carousel_item">
-        <div class="item_card">
-          <a href="/lbcamp/detail_position.php?lat=${item.mapY}&lon=${item.mapX}">
-          <div class="sl_img">
-            <img src="${item.firstImageUrl}" alt="" onerror="this.src='/lbcamp/img/no_image.png'">
-          </div>
-          </a>
-          <div class="sl_txt">
-            <h2>${item.facltNm}</h2>
-            <p>${item.addr1}</p>
-          </div>
-          <div class="sl_icons">
-            <img src="img/ico_mart.png" alt="">
-            <em>${item.sbrsCl}</em>
-          </div>
-
-        </div>
-      </div>
-      </div>
-  `;
-      contentBox.innerHTML += currentItems;
+      itemDOM(item);
       // console.log(item);
       var map;
 

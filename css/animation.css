@@ -76,6 +76,12 @@
   }
 }
 @keyframes start {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
 }
 @keyframes scale-up {
   0% {
@@ -90,6 +96,22 @@
   }
   100% {
     transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes show-up {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  45% {
+    transform: translateY(-15px);
+  }
+  70% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }

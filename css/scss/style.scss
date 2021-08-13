@@ -177,6 +177,10 @@ span.bar_line {
   &.start {
     animation: start 0.5s 1;
     animation-fill-mode: forwards;
+    animation-delay: 3s;
+  }
+  &.started {
+    top: -100%;
   }
   .landing_logo {
     background: #fff;
@@ -198,6 +202,11 @@ span.bar_line {
     font-weight: 400;
     font-size: 16px;
     margin: 10px 0;
+    animation: show-up 1s 1;
+    transform: translateY(200px);
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 1s;
   }
 }
 
