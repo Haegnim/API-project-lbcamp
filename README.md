@@ -1,6 +1,6 @@
 # GOcamp web app
 
-_구글 맵스 API를 활용한 캠핑 검색 웹앱_
+_구글 맵스 API를 활용한 캠핑 탐색 웹앱_
 
 ![mainpage](#)
 
